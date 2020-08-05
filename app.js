@@ -1,17 +1,17 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const port = 2022
+const port = 2011
 
 // Router Zone
-
+const adminRouter = require('./src/router/adminRouter')
 // 
 
 app.use(cors())
 app.use(express.json())
 
 // app.use Router
-
+app.use (adminRouter)
 // 
 
 app.get('/', (req, res) => {
